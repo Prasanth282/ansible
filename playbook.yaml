@@ -1,5 +1,5 @@
 -name: my firrst ansible playbook
  host: node1 
- tasks 
+ tasks: 
   -name: ping the server 
    ansible.builtin.ping:
