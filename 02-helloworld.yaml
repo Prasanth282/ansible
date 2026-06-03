@@ -1,6 +1,6 @@
 - name: hello world usimg ansible 
-  hosts: local
-  connection: local
+  hosts: local # means with in ansible server 
+  connection: local  # no need user name and password if you are using connection as local with in ansible server 
   tasks: 
    - name: print hello world msg 
      ansible.builtin.debug:
