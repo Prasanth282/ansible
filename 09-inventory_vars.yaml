@@ -3,5 +3,5 @@
   connection: local
   tasks:
    - name: print the varibales from inventory
-     ansible.builtin.dbug:
+     ansible.builtin.debug:
       msg: "course name is {{ COURSE }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}"
