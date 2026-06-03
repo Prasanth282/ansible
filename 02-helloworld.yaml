@@ -1,0 +1,6 @@
+- name: hello world usimg ansible 
+  hosts: local
+  tasks: 
+   - name: print hello world msg 
+     ansible.builtin.debug:
+      msg: "hello world from ansible"
