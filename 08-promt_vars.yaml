@@ -1,0 +1,16 @@
+- name: promt variables to hide the information which is provided and saved in the variables 
+  hosts: local 
+  connection: local 
+  vars_promt: 
+   - name: USERNAME
+     promt: enter user name 
+     private: true 
+   - name: PASSWORD 
+     promt: enter password 
+     private: true
+  
+  tasks:
+   - name: print the promt variables 
+     ansible.builtin.debug:
+      msg: " user name is {{ USERNAME }}, password is {{ PASSWORD }}"
+  
