@@ -1,0 +1,13 @@
+- name: declaring variables in ansible playbook
+  hosts: local 
+  connection: local 
+  vars:
+   COURSE: devops
+   TRAINER: sivakumar
+   DURATION: 10HR
+  
+  tasks:
+   - name: print the course details 
+     ansible.builtin.debugh:
+      msg: "course name is {{ course }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}" 
+  
