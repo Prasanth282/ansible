@@ -2,9 +2,9 @@
   hosts: local 
   connection: local 
   vars:   # declaring the varables 
-   COURSE: devops
-   TRAINER: sivakumar
-   DURATION: 10HR
+   COURSE=devops
+   TRAINER=ansible
+   DURATION=10hr
   
   tasks:
   - name: print the course details 
