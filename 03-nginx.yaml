@@ -1,8 +1,9 @@
 - name: installing nginx in the server using yaml 
   hosts: node1
   tasks: 
+  become: yes 
    - name: installing nginx 
      ansible.builtin.package:
       name: nginx
-      starte: prasent
+      state: present
     
