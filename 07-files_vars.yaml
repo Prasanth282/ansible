@@ -1,0 +1,9 @@
+- name: call variables from diff file 
+  hosts: local 
+  connection: local
+  vars_files:
+   - course.yaml
+  tasks:
+   - name: print the content from the file 
+     ansible.builtin.debug:
+      msg: "course name is {{ COURSE }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}"
