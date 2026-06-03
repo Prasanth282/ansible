@@ -3,8 +3,8 @@
   connection: local 
   vars:   # declaring the varables 
    COURSE: devops
-   TRAINER=ansible
-   DURATION=10hr
+   TRAINER: sivakumar
+   DURATION: 10hr
   
   tasks:
   - name: print the course details 
