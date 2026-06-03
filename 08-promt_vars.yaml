@@ -1,7 +1,7 @@
 - name: promt variables to hide the information which is provided and saved in the variables 
   hosts: local 
   connection: local 
-  vars_promt: 
+  vars_prompt:
    - name: USERNAME
      prompt: enter username
      private: true 
