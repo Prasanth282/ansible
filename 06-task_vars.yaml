@@ -9,14 +9,14 @@
    tasks:
   
    - name: print the course details
-    vars:
+     vars:
       COURSE: aws
       TRAINER: prasanth
       DURATION: 14hr
     
      ansible.builtin.debug:
       msg: "course name is {{ COURSE }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}"
-      
+
    - name: print the course details
      ansible.builtin.debug:
       msg: "course name is {{ COURSE }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}"
