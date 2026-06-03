@@ -18,7 +18,7 @@
       msg: "hello from task1'
    - name: print helloworld from task2 
      ansible.builtin.debug:
-      massage: "hello from task2"
+      msg: "hello from task2"
 
 
 
