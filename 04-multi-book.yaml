@@ -9,13 +9,13 @@
      ansible.builtin.debug:
       msg: "hello from task2"
 
-- name: multi playbookin ansible play1
+- name: multi playbookin ansible play2
   hosts: local 
   connection: local 
   tasks: 
    - name: print hello wworld from task 1
      ansible.builtin.debug:
-      msg: "hello from task1'
+      msg: "hello from task1"
    - name: print helloworld from task2 
      ansible.builtin.debug:
       msg: "hello from task2"
