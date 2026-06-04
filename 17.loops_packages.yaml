@@ -1,0 +1,12 @@
+- name: installing packages
+  hosts: local
+  connections: local
+  tasks:
+   - name: installing packages using loop 
+     ansible.builtin.packages:
+      name: " {{ item }} "
+      state: present 
+     loop:
+      - nginx
+      - httpd
+      - java
