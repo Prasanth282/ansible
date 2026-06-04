@@ -1,0 +1,22 @@
+- name: datatypes 
+  hosts: local 
+  connection: local 
+  vars:
+   COURSE: devops
+   TRAINER: sivakumar
+   DURATION: 10HR 
+   LIVE: true
+   TOOLS:  #list []
+    - ansible \
+    - docker
+    - kubernetis
+    - junkins 
+   CONCEPTS: #this can be called as an map 0r dictionary or object {} 
+    CI: Junins # it takes as key 
+    SCRIPTING: "ansible,shell,python" #value 
+
+  tasks:
+   - name: print the two datatypes
+     ansible.builtin.debug:
+      msg: "course name is {{ COURSE }}, trainer name is {{ TRAINER }}, course duration is {{ DURATION }}, live class is {{ LIVE }}, tools are {{ TOOLS }}, concepts are {{ CONCEPTS }}"
+   
