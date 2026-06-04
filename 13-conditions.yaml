@@ -14,5 +14,5 @@
      when: NUMBER < 10 
    - name: printb the number if equal to 10
      ansible.builtin.debug:
-      msg: " the number is equal to 10'
-     when: NUMBER == "10"
+      msg: " the number is equal to 10"
+     when: NUMBER == 10
