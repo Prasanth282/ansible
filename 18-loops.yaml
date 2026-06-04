@@ -1,0 +1,13 @@
+- name: installing packages from another way # loop in map or dictionary or object form 
+  hosts: local
+  connection: local 
+  become: yes
+  tasks:
+   - name: installing packages in other form of loops 
+     ansible.builtin.package:
+      name: " {{ item.name }} "
+      state: " {{ item.state }} "
+     loop:
+     - { name: nginx, state: present }
+     - { name: httpd, state: present }
+     - { name: python, state: present }
