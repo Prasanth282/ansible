@@ -7,7 +7,7 @@
   
    - name: default function 
      ansible.builtin.debug:
-      msg: " {{ PERSON | default('rathod') }}"  # default module 
+      msg: "{{ PERSON | default('rathod') }}"  # default module 
    
    - name: split function 
      ansible.duiltin.debug:
