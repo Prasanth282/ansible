@@ -11,7 +11,7 @@
    
    - name: split function 
      ansible.builtin.debug:
-      msg: "{{ PERSON | split(',') }}"
+      msg: "{{ PERSON | split('/') }}"
 
 
      
