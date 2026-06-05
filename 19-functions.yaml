@@ -2,11 +2,8 @@
   hosts: local
   connection: local
   vars:
-   PERSON:
-   - sriram 
-   - kiran
-   - venkat 
-   - rathod
+   PERSON: "sriram,kiran,nandha,venkat"
+   
   tasks: 
   
    - name: default function 
