@@ -7,5 +7,5 @@
   
    - name: default function 
      ansible.builtin.debug:
-      msg: " {{ PERSON }}"
+      msg: " {{ PERSON | default('rathod') }}"
      
