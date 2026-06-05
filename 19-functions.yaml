@@ -26,22 +26,11 @@
    - name: convert list to map # 
      vars:
       COURSE:
-       [
-        -  {
-            "key": "name",
-            "value": "devops"
-         }
-        -  {
-            "key": "duration",
-            "value": "20hr"
-         }
-        -{
-            "key": "trainer",
-            "value": "nandha"
-         }
-        ]
+       - { key: 'name', value: 'devops'}
+       - { key: 'trainer', value: 'nandha'}
+       - { key: 'duration', value: '10hr' } 
      ansible.builtin.debug:
-      msg : "{{ COURSE | items2dist }}""
+      msg : "{{ COURSE | items2dist }}"
 
 
      
