@@ -30,7 +30,7 @@
        - { key: 'trainer', value: 'nandha'}
        - { key: 'duration', value: '10hr' } 
      ansible.builtin.debug:
-      msg : "{{ COURSE | items2dist }}"
+      msg : "{{ COURSE | items2dict }}"
 
 
      
