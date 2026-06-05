@@ -2,10 +2,16 @@
   hosts: local
   connection: local
   vars:
-  #  PERSON: rathod 
+   PERSON: "rathod,venkat,sriram,kiran"
   tasks: 
   
    - name: default function 
      ansible.builtin.debug:
-      msg: " {{ PERSON | default('rathod') }}"
+      msg: " {{ PERSON | default('rathod') }}"  # default module 
+   
+   - name: split function 
+     ansible.duiltin.debug:
+      msg: "{{ PERSON | split(',') }}"
+
+
      
