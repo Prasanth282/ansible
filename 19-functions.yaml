@@ -1,0 +1,11 @@
+- name: functions # we have pre defined functions in yaml we can use them 
+  hosts: local
+  connection: local
+  vars:
+  #  PERSON: rathod 
+  tasks: 
+  
+   - name: default function 
+     ansible.builtin.debug:
+      msg: " {{ PERSON }}"
+     
