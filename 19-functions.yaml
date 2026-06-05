@@ -10,7 +10,7 @@
       msg: "{{ PERSON | default('rathod') }}"  # default module 
    
    - name: split function 
-     ansible.duiltin.debug:
+     ansible.builtin.debug:
       msg: "{{ PERSON | split(',') }}"
 
 
