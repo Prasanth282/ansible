@@ -3,5 +3,10 @@
   connection: local 
   tasks:
    - name: redirecting output to a file ls 
-     ansible.builtin.shell: ls -ltr > /tmp/output.file
+     ansible.builtin.shell: ls -ltr > /tmp/output.file  # if you use shell command it tge linux complex commands will execute like redirections 
+     register: command_result 
+
+   - name: print the output 
+     ansible.builtin.debug:
+      msg: "{{ command_result }}"
     
