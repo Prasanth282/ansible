@@ -32,5 +32,11 @@
      ansible.builtin.debug:
       msg : "{{ COURSE | items2dict }}"
 
+   - name: to check the ip address # toc heck the ip address valid or not 
+     vars:
+      ip: "255.255.255.255"
+     ansible.builtin.debug:
+      msg: "{{ IP | ansible.utils.ipaddr }}"
+
 
      
