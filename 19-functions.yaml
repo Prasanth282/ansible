@@ -15,7 +15,16 @@
    
    - name: split function 
      ansible.builtin.debug:
-      msg: "{{ PERSON | split(',') }}"
+      msg: "{{ PERSON | split(',') }}" # split function will n ot work for list objects only work for string 
+   
+   - name: covert map to list 
+     vars: 
+      COURSE:
+       name: devops
+       duration: 20hr 
+       trainer: nandha
+     ansible.builtin.debug:
+      msg: "{{ COURSE | dict2items }}"
 
 
      
