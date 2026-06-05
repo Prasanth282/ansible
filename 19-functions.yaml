@@ -27,18 +27,18 @@
      vars:
       COURSE:
        [
-       -  {
+        -  {
             "key": "name",
             "value": "devops"
          }
-       -  {
+        -  {
             "key": "duration",
             "value": "20hr"
-        }
-       -{
+         }
+        -{
             "key": "trainer",
             "value": "nandha"
-        }
+         }
         ]
      ansible.builtin.debug:
       msg : "{{ COURSE | items2dist }}""
