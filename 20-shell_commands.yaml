@@ -1,0 +1,7 @@
+- name: shell vs command # not all modules available in ansible in that case we can use shell commands to execute the operation 
+  hosts: local
+  connection: local 
+  tasks:
+   - name: redirecting output to a file ls 
+     ansible.builtin.commad: ls -ltr > /tmp/output.file
+    
