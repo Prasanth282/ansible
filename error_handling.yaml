@@ -10,7 +10,7 @@
 
    - name: creating sai ratnam 
      ansible.builtin.command: useradd sai-ratnam
-     when: command_output.rc ! = 0
+     when: command_output.rc != 0
 
    - name: if user exists sending a msg \
      ansible.builtin.debug:
