@@ -11,8 +11,8 @@
       msg: "{{ command_result }}"
 
    - name: redirection using command module 
-     ansible.builtin.command: "ls -ltr"
-     register: command_output
+     ansible.builtin.command: "ls -ltr"   
+     register: command_output            # register will store the output of given command in the declired variable 
    - name: print the command output
      ansible.builtin.debug:
       msg: "{{ command_output }}"

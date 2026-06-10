@@ -1,0 +1,22 @@
+- name: checking user if user dpesn't exists create user 
+  become: yes 
+  hosts: local 
+  connection: local 
+  tasks: 
+   - name: check the user exit or not 
+     ansible.builtin.command: id sai-ratnam
+     register: command_output
+     ignore_errors: true 
+
+   - name: creating sai ratnam 
+     ansible.builtin.command: useradd sai-ratnam
+     when: command_output.rc ! = 0
+
+   - name: if user exists sending a msg \
+     ansible.builtin.debug:
+      msg: "user exists"
+     when: command_output.rc == 0
+     
+
+
+   
