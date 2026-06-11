@@ -1,0 +1,54 @@
+plugin: amazon.aws.aws_ec2  #plugin will extrract the ec2 data from aws at mentioned region 
+regions:
+- us-east-1
+filters:                  # filters will filter the running instances and provide a tag name 
+ tag:name: frontned
+ instance-state-name: running 
+keyed_groups:              # group names will create a group and add the all running instances in this group
+ - key: tag-name
+   prefix: "dynamic"
+   separator: "-"
+hostname:                   # it will extract tge private address from instance 
+ - private-ip-address
+compose:                     # compose will attach the private ip to the ansible hosts 
+ ansible_host: private_ip_address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

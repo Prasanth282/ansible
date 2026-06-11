@@ -1,0 +1,16 @@
+- name: configueing nginx
+  hosts: dynamic_frontend
+  become: yes 
+  tasks: 
+   - name: installing nginx
+     ansible.builtin.dnf:
+      name: nginx
+      state: present 
+
+   - name: start and enabling nginx
+     ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
+
+   
